@@ -1,0 +1,263 @@
+amarillo = #E0D561
+azul = #22BCE0
+gris_oscuro = #444
+gris_texto = #7A7A7A
+naranja = #DD4F24
+
+@font-face {
+  font-family: 'iconos';
+  src:  url('../fonts/icomoon.eot?hxu5wq');
+  src:  url('../fonts/icomoon.eot?hxu5wq#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?hxu5wq') format('truetype'),
+    url('../fonts/icomoon.woff?hxu5wq') format('woff'),
+    url('../fonts/icomoon.svg?hxu5wq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a
+	color naranja
+
+body
+	background #e8e8e8
+	font-family Arial
+	color gris_oscuro
+	font-size 16px
+
+footer
+	background naranja
+	color rgba(white, 0.5)
+	padding 1em 0
+	text-align center
+	width 100%
+	
+	h3
+		font-size 14px
+		font-weight normal
+		
+		strong
+			display block
+			
+		.mejor
+			&:before
+			&:after
+				content " - "
+							
+
+header
+	background gris_oscuro
+	box-shadow 0 5px 0 rgba(0,0,0,0.2)
+	color white
+	overflow hidden
+	padding 0.5em
+	position relative
+	z-index 1
+	
+	.logo
+		border-right 1px solid azul
+		float left
+		width 70px
+		
+		img
+			width 60px
+	
+	.titular
+		margin 0 60px 0 80px
+		
+		.filtro
+			color azul
+			font-size 14px
+			font-weight bold
+			font-style italic
+			text-decoration none
+		
+		.publicar
+			background naranja
+			color white
+			float right
+			font-style italic
+			margin -5px 1em 0 0
+			padding 0.2em 0.5em
+			text-decoration none
+			text-shadow 1px 1px 0px black
+			
+			&:before
+				content: "\e908"
+				font-family "iconos"
+				margin-right .5em
+				
+			
+		.titulo
+			font-size 18px
+			font-weight normal
+			margin 0
+			padding 0
+	.usuario
+		position absolute
+		right 10px
+		top 10px
+				
+		.avatar
+			margin 0 1.1em 0 0
+			position relative
+			z-index 2 
+			img
+				width 50px
+				border-radius 50%
+		.flecha
+			background naranja
+			color white
+			display block
+			padding 2px
+			position absolute
+			right 0
+			text-decoration none
+			top 15px
+			text-align right
+			width 50%
+			
+			&:after
+				content "\e900"
+				font-family "iconos"
+				text-shadow 1px 1px 0px black
+				
+
+nav
+	background azul
+	border-left 15px solid white
+	position relative
+	&:before
+		border-bottom 20px solid transparent
+		border-left 7px solid white
+		border-top 20px solid transparent
+		content ""
+		left 0
+		position absolute
+		top 0
+		
+	.menu
+		height 40px
+		line-height 40px
+		margin 0
+		padding 0
+		overflow-x auto
+		text-align left
+		white-space nowrap
+		li
+			display inline-block
+			
+			a
+				color white
+				display block
+				margin 0 0.5em
+				padding 0 0.2em
+				text-decoration none
+.posts
+	padding 0.5em
+	
+	.post
+		background white
+		border-radius 0 0 0.5em 0.5em
+		box-shadow 2px 2px 10px rgba(black, 0.5)
+		color gris_texto
+		margin-bottom 1em
+	
+	.acciones
+		border-top 3px solid azul
+		padding 0.5em
+		overflow hidden
+		
+		.datos
+			float right
+			
+			.comentarios
+				background gris_oscuro
+				border-radius 3px
+				color white
+				margin 0 1em 0 0 
+				padding 2px 5px
+				text-decoration none
+				
+			.estrella
+				text-decoration none
+				&:before
+					color amarillo
+					content: "\e9d9"
+					font-family "iconos"
+				
+		.votos
+			float left
+			
+			.down
+			.up
+				text-decoration none	
+			.down
+				color red
+				&:before
+					content "\e900"
+					font-family "iconos"
+					font-size 1.5em
+					vertical-align bottom
+			.up
+				color green
+				&:before
+					content "\e901"
+					font-family "iconos"
+					font-size 1.5em
+					vertical-align bottom
+	.descripcion
+		color gris_texto
+		
+		.detalles
+			height 160px
+			margin-left 130px
+
+			.autor
+				margin 0.5em 0 2em 0
+
+			.fecha
+				float right
+				margin 0 1em 0 0
+
+			.tag
+				background azul
+				border-radius 0.5em
+				color white
+				padding 0.2em 0.5em
+				text-decoration none
+
+			.titulo
+				color gris_oscuro
+				font-size 18px
+				font-style italic
+				margin 0
+				padding 1em 1em 0 0
+			
+		.imagen
+			float left
+			margin 0
+			img
+				height 160px
+				vertical-align top
+				width 120px		
+
+@media screen and (min-width: 768px)
+	header
+		.titular
+			.publicar
+				padding-left 3em
+				position relative
+				
+				&:before
+					left 0px
+					font-size 2em
+					position absolute
+					top -10px
+      
+	.posts
+		.post
+			display inline-block
+			vertical-align top
+			width 48%
+			&:nth-child(odd)
+				margin-right 2%
